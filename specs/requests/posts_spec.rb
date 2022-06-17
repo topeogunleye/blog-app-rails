@@ -1,4 +1,5 @@
 require 'rails_helper'
+require_relative '../../app/controllers/posts_controller'
 
 RSpec.describe 'Posts', type: :request do
   describe 'GET /posts' do
