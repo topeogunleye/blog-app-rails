@@ -25,7 +25,7 @@ development:
   <<: *default
   database: blog_app_development
 
-  # The specified database role being used to connect to postgres.
+  # The specified databases role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
@@ -52,16 +52,16 @@ development:
   # Defaults to warning.
   #min_messages: notice
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
+# Warning: The databases defined as "test" will be erased and
+# re-generated from your development databases when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
   database: blog_app_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
-# like your database password, in your source code. If your source code is
-# ever seen by anyone, they now have access to your database.
+# like your databases password, in your source code. If your source code is
+# ever seen by anyone, they now have access to your databases.
 #
 # Instead, provide the password or a full connection URL as an environment
 # variable when you boot the app. For example:
@@ -77,7 +77,7 @@ test:
 #     url: <%= ENV["MY_APP_DATABASE_URL"] %>
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
-# for a full overview on how database connection configuration can be specified.
+# for a full overview on how databases connection configuration can be specified.
 #
 production:
   <<: *default

@@ -11,7 +11,7 @@ gem 'rails', '~> 7.0.3'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
-# Use postgresql as the database for Active Record
+# Use postgresql as the databases for Active Record
 gem 'pg', '~> 1.1'
 
 # Use the Puma web server [https://github.com/puma/puma]
@@ -57,6 +57,7 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem 'rspec-rails', '5.0.1'
   gem 'web-console'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
