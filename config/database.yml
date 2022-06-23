@@ -23,13 +23,15 @@ default: &default
 
 development:
   <<: *default
-  database: blog_app_development
+  database: blog_development_db
+  username: postgres
+  password: <%= ENV["BLOG_DATABASE_PASSWORD"] %>
 
-  # The specified databases role being used to connect to postgres.
+  # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: blog_app
+  #username: blog
 
   # The password associated with the postgres role (username).
   #password:
@@ -52,16 +54,18 @@ development:
   # Defaults to warning.
   #min_messages: notice
 
-# Warning: The databases defined as "test" will be erased and
-# re-generated from your development databases when you run "rake".
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: blog_app_test
+  database: blog_test_db
+  username: postgres
+  password: <%= ENV["BLOG_DATABASE_PASSWORD"] %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
-# like your databases password, in your source code. If your source code is
-# ever seen by anyone, they now have access to your databases.
+# like your database password, in your source code. If your source code is
+# ever seen by anyone, they now have access to your database.
 #
 # Instead, provide the password or a full connection URL as an environment
 # variable when you boot the app. For example:
@@ -77,10 +81,10 @@ test:
 #     url: <%= ENV["MY_APP_DATABASE_URL"] %>
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
-# for a full overview on how databases connection configuration can be specified.
+# for a full overview on how database connection configuration can be specified.
 #
 production:
   <<: *default
-  database: blog_app_production
-  username: blog_app
-  password: <%= ENV["BLOG_APP_DATABASE_PASSWORD"] %>
+  database: blog_production_db
+  username: postgres
+  password: <%= ENV["BLOG_DATABASE_PASSWORD"] %>
