@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env ruby.exe
 require "fileutils"
 
 # path to your application root.
@@ -18,11 +18,11 @@ FileUtils.chdir APP_ROOT do
   system("bundle check") || system!("bundle install")
 
   # puts "\n== Copying sample files =="
-  # unless File.exist?("config/databases.yml")
-  #   FileUtils.cp "config/databases.yml.sample", "config/databases.yml"
+  # unless File.exist?("config/database.yml")
+  #   FileUtils.cp "config/database.yml.sample", "config/database.yml"
   # end
 
-  puts "\n== Preparing databases =="
+  puts "\n== Preparing database =="
   system! "bin/rails db:prepare"
 
   puts "\n== Removing old logs and tempfiles =="
